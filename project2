@@ -1,0 +1,10 @@
+server {
+    server_name project2;
+    listen 8082;
+
+    location / {
+        root /var/www/project2;
+        try_files $uri $uri/ /index.html;
+        index index.html;
+    }
+}
