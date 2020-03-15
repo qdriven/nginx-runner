@@ -22,8 +22,8 @@ class NginxConf(BaseModel):
 def set_up_conf(conf: NginxConf):
     file_name = generate_server_config(conf.project_name, conf.port, conf.root_path)
     shutil.copy(file_name, NGINX_CONF_PATH)
-    subprocess.run("sudo nginx -t", shell=True)
-    cp = subprocess.run("sudo nginx -s reload", shell=True)
+    subprocess.run("nginx -t", shell=True)
+    cp = subprocess.run("nginx -s reload", shell=True)
     return {"status": cp.stdout}
 
 
