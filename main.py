@@ -5,7 +5,7 @@ import uvicorn
 from fastapi import FastAPI
 from pydantic import BaseModel
 
-from nginx_server_conf import generate_server_config
+from nginx_server_conf import *
 
 app = FastAPI()
 
@@ -14,13 +14,13 @@ NGINX_CONF_PATH = "/etc/nginx/sites-enabled/"
 
 class NginxConf(BaseModel):
     project_name: str
-    port: int
-    root_path: str
+    # port: int
+    # root_path: str
 
 
 @app.post("/nginx")
 def set_up_conf(conf: NginxConf):
-    file_name = generate_server_config(conf.project_name, conf.port, conf.root_path)
+    file_name = append_location_to_nginx(conf.project_name)
     shutil.copy(file_name, NGINX_CONF_PATH)
     subprocess.run("nginx -t", shell=True)
     cp = subprocess.run("nginx -s reload", shell=True)

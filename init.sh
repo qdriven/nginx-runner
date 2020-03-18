@@ -3,5 +3,5 @@
 # need python3.7+ installed
 
 python3 -m venv venv/
-pip install -r requirements.txt
-sudo ./venv/bin/python3 main.py
+source venv/bin/activate
+venv/bin/pip install -r requirements.txt

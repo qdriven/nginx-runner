@@ -1,0 +1,1 @@
+{"locations": {"project1": {"root": "/var/www/project1", "try_files": "$uri $uri / / index.html", "index": "index.html"}, "project2": {"root": "/var/www/project2", "try_files": "$uri $uri / / index.html", "index": "index.html"}, "project3": {"root": "/var/www/project3", "try_files": "$uri $uri / / index.html", "index": "index.html"}}}
