@@ -1,1 +1,14 @@
-{"locations": {"project2": {"try_files": "$uri $uri/ @router", "index": "index.html", "router": "rewrite ^.*$ /project2/index.html last;"}, "project1": {"try_files": "$uri $uri/ @router", "index": "index.html", "router": "rewrite ^.*$ /project1/index.html last;"}}}
+{
+  "locations": {
+    "project2": {
+      "try_files": "$uri $uri/ @router",
+      "index": "index.html",
+      "router": "rewrite ^.*$ /project2/index.html last;"
+    },
+    "project1": {
+      "try_files": "$uri $uri/ @router",
+      "index": "index.html",
+      "router": "rewrite ^.*$ /project1/index.html last;"
+    }
+  }
+}
