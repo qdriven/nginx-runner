@@ -6,6 +6,10 @@
 ## Reference 
 
 - [nginx-conf-builder](https://github.com/linkedin/nginx-config-builder)
+- [Fast API](https://github.com/tiangolo/fastapi.git)
+
+## 其他参考项目
+
 - https://janakiev.com/blog/python-shell-commands/
 - https://github.com/xhimanshuz/ngxManager
 - https://nginx.org/en/docs/beginners_guide.html
